@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Auto Vin Search</title>
+  </head>
+  <body>
+    <nav class="w-full bg-blue-800 px-4 py-2">
+      <h3 class="text-3xl text-white font-bold flex items-center">
+        Auto Vin Search
+      </h3>
+    </nav>
+    <h1
+      class="mb-4 mt-8 text-4xl text-center font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white mx-4"
+    >
+      Unlock Details Of Any Vehicle
+    </h1>
+    <p
+      class="mb-8 mx-12 text-lg font-normal text-gray-500 lg:text-xl text-center sm:px-16 lg:px-48 dark:text-gray-400"
+    >
+      Enter your (at least) 12 digit vin to discover more about your vehicle
+      with our VIN decoder
+    </p>
+    <div class="lg:w-[40rem] w-[90vw] mx-auto mt-12">
+      <div class="border-2 border-black rounded-lg w-full flex items-center overflow-hidden">
+        <input
+        id="vinInput"
+          type="text"
+          class="w-full outline-0 text-xl pl-3"
+          placeholder="Vehicle Identification Number"
+        />
+        <button id="searchBtn" class="w-fit bg-blue-800 h-full py-1 px-2 border-l">
+          <svg
+            aria-hidden="true"
+            class="w-6 h-8"
+            fill="none"
+            stroke="white"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- <ul id="results">
+      <li>
+
+        <div id="label">AirBagLocFront</div>
+        <div id="info">  1st Row (Driver and Passenger)</div>
+      </li>
+      <li><div id="label">BodyClass</div>
+      <div id="info">Coupe</div>
+</li>
+      <li>
+        <div id="label">Doors</div>
+      <div id="info">2</div>
+      </li>
+      
+      
+
+      
+    </ul> -->
+
+    <div class="mt-8">
+      <div id="message"></div>
+      <h2 id="name" class="flex font-semibold text-2xl space-x-1 mx-auto w-fit">
+        <span id="year"></span>
+        <span id="make"></span>
+        <span id="model"></span>
+      </h2>
+      <div
+        class="mx-auto flex flex-wrap mt-2 mb-[10vh] max-w-2xl"
+        id="data"
+      ></div>
+    </div>
+    <div class="max-w-[70rem] w-[90vw] mx-auto">
+      <h2 class="text-3xl font-extrabold">What is a VIN?</h2>
+      <p class="my-4 md:text-lg text-gray-500">
+        A VIN, or Vehicle Identification Number, is a unique code assigned to
+        each motor vehicle. It contains important details about the vehicle,
+        such as its manufacturer, model year, and production number. The VIN
+        serves as a vital identifier for registrations, insurance claims, and
+        vehicle history reports, ensuring transparency in the automotive
+        industry.
+        <a
+          target="_blank"
+          class="text-blue-500 font-semibold"
+          href="https://www.autocheck.com/vehiclehistory/vin-basics"
+          >Learn More</a
+        >
+      </p>
+      <h2 class="text-3xl font-extrabold">Where to find a VIN?</h2>
+      <p class="my-4 md:text-lg text-gray-500">
+        The VIN, or Vehicle Identification Number, can typically be found in
+        several locations on a vehicle. The most common location is on the
+        dashboard, visible through the windshield on the driver's side. It may
+        also be located on the driver's side door jamb, the engine block, or the
+        vehicle's frame. Additionally, the VIN can often be found on important
+        documents such as the vehicle registration, insurance card, or
+        maintenance records. Regardless of the specific location, the VIN serves
+        as a crucial identifier for the vehicle, allowing easy access to its
+        unique information and history.
+        <a
+          target="_blank"
+          class="text-blue-500 font-semibold"
+          href="https://autotrends.org/where-is-my-vin-number-located/"
+          >Learn More</a
+        >
+      </p>
+    </div>
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
