@@ -1,4 +1,4 @@
-const apiKey = config.API_KEY
+const apiKey =  process.env.API_KEY
 document.querySelector("#searchBtn").addEventListener("click", searchVin);
 async function searchVin() {
   const vin = document.querySelector("#vinInput").value;
